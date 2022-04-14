@@ -76,12 +76,12 @@ class droneController:
         forward_direction = np.array([np.cos(yaw), np.sin(yaw), 0])     # 前后方向
         left_direction = np.array([np.cos(yaw - np.deg2rad(90)), np.sin(yaw - np.deg2rad(90)), 0])  # 左右方向
 
-        if self._active_commands["take off"]:
-            self._client.takeoffAsync()  # takeoff
-
-        if self._active_commands["land"]:
-            # self._client.landAsync()  # land
-            self._client.goHomeAsync()
+        # if self._active_commands["take off"]:
+        #     self._client.takeoffAsync()  # takeoff
+        #
+        # if self._active_commands["land"]:
+        #     # self._client.landAsync()  # land
+        #     self._client.goHomeAsync()
 
         # 若前后运动
         if self._active_commands["forward"] or self._active_commands["backward"]:
